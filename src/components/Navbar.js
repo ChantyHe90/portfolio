@@ -7,20 +7,29 @@ import {
   FormControl,
   Button
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class myNavbar extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar
+          className="navbar navbar-expand-lg bg-light fixed-top text-uppercase text-primary navbar-shrink"
+          bg="light"
+          expand="lg"
+        >
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+              {/* about */}
+              {/* portfolio */}
+              {/* contact */}
+              <Nav.Link href="home">About</Nav.Link>
+              {/* oder:  <Link to="/about"> */}
+              <Nav.Link href="home">Portfolio</Nav.Link>
+              <Nav.Link href="link">Contact</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
