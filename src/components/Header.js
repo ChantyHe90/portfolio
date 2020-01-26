@@ -4,7 +4,7 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container headerContainer">
           <div className="masthead bg-secondary text-white text-center header-bg">
             <p>
               ich bin ein header <br></br> ich bin ein header <br></br> ich bin

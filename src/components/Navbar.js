@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button
-} from "react-bootstrap";
+import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -19,39 +12,37 @@ export default class myNavbar extends Component {
           bg="light"
           expand="lg"
         >
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand
+            href="/"
+            style={{ fontFamily: "Fredericka the Great", fontStyle: "cursive" }}
+          >
+            web developer
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              {/* about */}
-              {/* portfolio */}
-              {/* contact */}
-              <Nav.Link href="home">About</Nav.Link>
-              {/* oder:  <Link to="/about"> */}
-              <Nav.Link href="home">Portfolio</Nav.Link>
-              <Nav.Link href="link">Contact</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
+            <Nav
+              className="mr-auto"
+              style={{
+                flexGrow: 10,
+                alignItems: "center"
+              }}
+            >
+              <ul className="navbar-nav ml-auto" style={{ marginLeft: 0 }}>
+                {/* about */}
+                {/* portfolio */}
+                {/* contact */}
+                <Nav.Link href="about">
+                  <li className="nav-item mx-0 mx-lg-1">About</li>
+                </Nav.Link>
+                {/* oder:  <Link to="/about"> */}
+                <Nav.Link href="portfolio">
+                  <li className="nav-item mx-0 mx-lg-1">Portfolio</li>
+                </Nav.Link>
+                <Nav.Link href="contact">
+                  <li className="nav-item mx-0 mx-lg-1">Contact</li>
+                </Nav.Link>
+              </ul>
             </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Navbar.Collapse>
         </Navbar>
       </div>

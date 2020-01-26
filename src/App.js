@@ -5,12 +5,14 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
+import About from "./components/About";
+import Contact from "./components/Contact";
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
+          {/* <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <a
@@ -20,17 +22,19 @@ class App extends React.Component {
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
+          </a> */}
           <Navbar></Navbar>
           {/* about */}
           {/* portfolio */}
           {/* contact */}
 
-          <Header />
           <Router>
             <Switch>
+              <Route exact path="/">
+                <Header />
+              </Route>
               <Route exact path="/about">
-                {/* about component */}
+                <About />
               </Route>
               {/* <Route exact path="/" component={Home} /> */}
               {/* <Route
@@ -44,11 +48,14 @@ class App extends React.Component {
             }}
           ></Route> */}
               <Route path="/portfolio">
-                <Portfolio></Portfolio>
+                <Portfolio />
               </Route>
               {/* <Route path="/contact">
             <Home />
           </Route> */}
+              <Route path="/contact">
+                <Contact></Contact>
+              </Route>
             </Switch>
           </Router>
         </header>
