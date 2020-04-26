@@ -4,7 +4,17 @@ import { Row, Col, Image } from "react-bootstrap";
 import ProjectOne from "./ProjectOne";
 import GameComponent from "./GameComponent";
 import ProjectTwo from "./ProjectTwo";
+import Video from "./Video"
 
+const blank = (
+  <div style={{backgroundColor: "red"}}>
+                   <br/> 
+                   <br/>
+                <br/> 
+                <br/> 
+                <br/> 
+                </div>
+)
 export default class Portfolio extends Component {
   constructor(props) {
     super(props);
@@ -42,9 +52,11 @@ export default class Portfolio extends Component {
                 />
                 <p>Jump & Crouch Game</p>
 
+
                 {this.state.visible ? (
                   <ProjectOne isVisible={this.isVisible} />
-                ) : null}
+                ) : blank
+                }
               </Col>
               <Col md={4}>
                 {/* <a
@@ -58,10 +70,11 @@ export default class Portfolio extends Component {
                   onMouseLeave={this.toggleHover}
                   responsive
                 />{" "}
-                <p>Collaborative Project: Buckit-List</p>
+                <p>Collaborative: Buckit-List</p>
                 {this.state.visible ? (
                   <GameComponent isVisible={this.isVisible} />
-                ) : null}
+                ) : blank}
+                <Video/>
               </Col>
 
               <Col md={4}>
@@ -79,7 +92,7 @@ export default class Portfolio extends Component {
                 <p>Your Ecological Food-Print</p>
                 {this.state.visible ? (
                   <ProjectTwo isVisible={this.isVisible} />
-                ) : null}
+                ) : blank}
               </Col>
               {/* <PortfolioItem
                 isVisible={this.isVisible}
